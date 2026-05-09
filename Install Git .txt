@@ -1,0 +1,9 @@
+উইন্ডোজ (Winget ব্যবহার করে)যদি আপনি কোনো ফাইল ডাউনলোড না করে সরাসরি কমান্ড দিয়ে ইনস্টল করতে চান:powershellwinget install --id Git.Git -e --source winget
+
+সতর্ক হয়ে কোড ব্যবহার করুন।ম্যাক (Homebrew ব্যবহার করে)bashbrew install git
+
+সতর্ক হয়ে কোড ব্যবহার করুন।লিনাক্স (Ubuntu/Debian)bashsudo apt update && sudo apt install git -y
+
+সতর্ক হয়ে কোড ব্যবহার করুন।ইনস্টলেশনের পর ইউজার সেটআপ (কপি-পেস্ট করুন)ইনস্টল হয়ে গেলে আপনার নাম ও ইমেইল সেট করতে নিচের কমান্ডগুলো ব্যবহার করুন (আপনার নিজের নাম ও ইমেইল বসিয়ে নিন):bashgit config --global user.name "Your Name"
+git config --global user.email "youremail@example.com"
+সতর্ক হয়ে কোড ব্যবহার করুন।
