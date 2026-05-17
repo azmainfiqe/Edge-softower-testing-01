@@ -1,0 +1,386 @@
+``html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarCinema Booking System</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background-color:#000;
+            color:white;
+        }
+
+        /* Navbar */
+
+        .main-container{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:20px 60px;
+            background-color:#111;
+            border-bottom:2px solid red;
+        }
+
+        .logo{
+            color:red;
+            font-size:35px;
+            font-weight:bold;
+        }
+
+        .menu{
+            display:flex;
+            list-style:none;
+        }
+
+        .item{
+            margin-left:25px;
+            cursor:pointer;
+            transition:.3s;
+        }
+
+        .item:hover{
+            color:red;
+        }
+
+        .btn{
+            background:red;
+            color:white;
+            border:none;
+            padding:12px 25px;
+            border-radius:5px;
+            cursor:pointer;
+            transition:.3s;
+        }
+
+        .btn:hover{
+            background:white;
+            color:red;
+        }
+
+        /* Banner */
+
+        .banner-container{
+            display:flex;
+            justify-content:space-around;
+            align-items:center;
+            padding:80px 40px;
+        }
+
+        .banner-text{
+            width:50%;
+        }
+
+        .hi{
+            font-size:60px;
+            color:aqua;
+            margin-bottom:20px;
+        }
+
+        .hlw{
+            font-size:30px;
+            margin-bottom:15px;
+        }
+
+        .para{
+            font-size:18px;
+            line-height:30px;
+            color:#ddd;
+            margin-bottom:25px;
+        }
+
+        .banner-img img{
+            width:420px;
+            border-radius:15px;
+            box-shadow:0 0 20px red;
+        }
+
+        /* Movie Section */
+
+        .portfolio{
+            text-align:center;
+            margin-top:40px;
+            color:aqua;
+            font-size:40px;
+        }
+
+        .movie-container{
+            display:flex;
+            justify-content:center;
+            gap:30px;
+            flex-wrap:wrap;
+            padding:50px;
+        }
+
+        .movie-box{
+            width:300px;
+            background:#111;
+            border:2px solid red;
+            border-radius:10px;
+            overflow:hidden;
+            transition:.4s;
+        }
+
+        .movie-box:hover{
+            transform:translateY(-10px);
+            box-shadow:0 0 20px red;
+        }
+
+        .movie-box img{
+            width:100%;
+            height:350px;
+        }
+
+        .movie-details{
+            padding:20px;
+        }
+
+        .movie-title{
+            color:aqua;
+            margin-bottom:10px;
+        }
+
+        .movie-time{
+            margin-bottom:15px;
+            color:#ccc;
+        }
+
+        /* Booking Section */
+
+        .booking-section{
+            padding:60px;
+            text-align:center;
+        }
+
+        .booking-title{
+            font-size:40px;
+            color:aqua;
+            margin-bottom:30px;
+        }
+
+        .booking-form{
+            width:400px;
+            margin:auto;
+            background:#111;
+            padding:40px;
+            border-radius:10px;
+            border:2px solid red;
+        }
+
+        .booking-form input{
+            width:100%;
+            padding:12px;
+            margin-top:15px;
+            background:black;
+            border:1px solid gray;
+            color:white;
+            border-radius:5px;
+        }
+
+        .booking-form button{
+            margin-top:20px;
+            width:100%;
+        }
+
+        /* Footer */
+
+        .footer{
+            background:#111;
+            text-align:center;
+            padding:30px;
+            margin-top:50px;
+            border-top:2px solid red;
+        }
+
+        .footer h2{
+            color:aqua;
+            margin-bottom:10px;
+        }
+
+        /* Responsive */
+
+        @media only screen and (max-width:768px){
+
+            .main-container{
+                flex-direction:column;
+            }
+
+            .menu{
+                margin-top:20px;
+            }
+
+            .banner-container{
+                flex-direction:column;
+                text-align:center;
+            }
+
+            .banner-text{
+                width:100%;
+                margin-bottom:40px;
+            }
+
+            .hi{
+                font-size:40px;
+            }
+
+            .banner-img img{
+                width:300px;
+            }
+
+            .booking-form{
+                width:100%;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <div class="main-container">
+
+        <div class="logo">
+            StarCinema
+        </div>
+
+        <ul class="menu">
+            <li class="item">Home</li>
+            <li class="item">Movies</li>
+            <li class="item">Booking</li>
+            <li class="item">Contact</li>
+        </ul>
+
+        <button class="btn">Login</button>
+
+    </div>
+
+    <!-- Banner -->
+
+    <div class="banner-container">
+
+        <div class="banner-text">
+
+            <h3 class="hlw">Welcome To</h3>
+
+            <h1 class="hi">Movie Ticket Booking System</h1>
+
+            <p class="para">
+                Book your favorite movie tickets online with our 
+                modern cinema booking platform. 
+                Choose seats, view showtimes, and enjoy your movie experience.
+            </p>
+
+            <button class="btn">Book Now</button>
+
+        </div>
+
+        <div class="banner-img">
+            <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1200&auto=format&fit=crop" alt="">
+        </div>
+
+    </div>
+
+    <!-- Movies -->
+
+    <h1 class="portfolio">Now Showing</h1>
+
+    <div class="movie-container">
+
+        <div class="movie-box">
+
+            <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1200&auto=format&fit=crop" alt="">
+
+            <div class="movie-details">
+
+                <h2 class="movie-title">Avengers Endgame</h2>
+
+                <p class="movie-time">Show Time: 6:00 PM</p>
+
+                <button class="btn">Book Ticket</button>
+
+            </div>
+
+        </div>
+
+        <div class="movie-box">
+
+            <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=1200&auto=format&fit=crop" alt="">
+
+            <div class="movie-details">
+
+                <h2 class="movie-title">Inception</h2>
+
+                <p class="movie-time">Show Time: 8:00 PM</p>
+
+                <button class="btn">Book Ticket</button>
+
+            </div>
+
+        </div>
+
+        <div class="movie-box">
+
+            <img src="https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?q=80&w=1200&auto=format&fit=crop" alt="">
+
+            <div class="movie-details">
+
+                <h2 class="movie-title">Interstellar</h2>
+
+                <p class="movie-time">Show Time: 10:00 PM</p>
+
+                <button class="btn">Book Ticket</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Booking Form -->
+
+    <div class="booking-section">
+
+        <h1 class="booking-title">Book Your Seat</h1>
+
+        <div class="booking-form">
+
+            <input type="text" placeholder="Enter Movie Name">
+
+            <input type="text" placeholder="Enter Show ID">
+
+            <input type="number" placeholder="Enter Row Number">
+
+            <input type="number" placeholder="Enter Seat Number">
+
+            <button class="btn">Confirm Booking</button>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer">
+
+        <h2>StarCinema Booking System</h2>
+
+        <p>Designed By Zakaria Hossain</p>
+
+    </div>
+
+</body>
+</html>
+```
+
